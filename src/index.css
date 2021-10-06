@@ -1,13 +1,36 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes myanimation {
+    0%   {background-color: green;}
+    20%  {background: none;}
+    40%  {background-color: green;}
+  }
+#animate {
+  width: 10px;
+  height: 15px;
+  background-color: green;
+  animation-name: myanimation;
+  animation: myanimation 1s infinite;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media screen and (max-width:850px){
+  #projects{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  #project-card{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 680px){
+  #skill{
+    font-size: small;
+  }
 }
